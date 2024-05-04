@@ -36,14 +36,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 ## Getting Wrecked
 ```bash
 cd Desktop
-git clone https://github.com/solahidris/boilerboiling
-cd boilerboiling
+git clone https://github.com/solahidris/boiler
+cd boiler
 git remote remove origin
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin <new_repository_url>
-git push -u origin main
+git remote add origin <new_repo_url>
+git push origin main --force
 ```
 
 ## Deploy on Vercel
