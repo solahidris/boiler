@@ -10,7 +10,6 @@ export default function Document() {
         {/* <meta name="description" content="IMPORTANT! WRITE WEBSITE DESCRIPTION HERE! --- bla bla bla this is a copy" /> */}
         {/* <meta name="keywords" content="IMPORTANT! WEBSITE KEYWORDS! --- sample, keyword, for, website" /> */}
         <meta name="author" content="Solah Idris" />
-        {/* <title>WebsiteNameHere</title> */}
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
