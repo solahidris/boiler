@@ -44,6 +44,8 @@ git add .
 git commit -m "Initial commit"
 git remote add origin <new_repo_url>
 git push origin main --force
+cd ..
+mv boiler newrepo
 ```
 
 ## Deploy on Vercel
