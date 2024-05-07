@@ -11,18 +11,10 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { scrollToSection } from "@/functions/scrollToSection";
 
 const HeaderNavbar = () => {
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
+  
   const [isDarkTheme, setIsDarkTheme] = useState(true);
   const darkThemeSheet = "bg-zinc-950 border-zinc-800"
   const darkThemeSheetButtonMobile = "bg-zinc-950 border-zinc-800 hover:bg-zinc-900"
