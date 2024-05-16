@@ -15,6 +15,7 @@ import { scrollToSection } from "@/functions/scrollToSection";
 
 const HeaderNavbar = () => {
   
+  // NEEDS MAJOR REVAMP
   const [isDarkTheme, setIsDarkTheme] = useState(true);
   const darkThemeSheet = "bg-zinc-950 border-zinc-800"
   const darkThemeSheetButtonMobile = "bg-zinc-950 border-zinc-800 hover:bg-zinc-900"
