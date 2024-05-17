@@ -12,7 +12,7 @@ const WhileInViewAnimation = ({ children }: WhileInViewAnimationProps) => {
 
   return (
     <section ref={ref}>
-      <span
+      <div
         style={{
           transform: isInView ? "none" : "translateX(-400px)",
           opacity: isInView ? 1 : 0,
@@ -20,7 +20,7 @@ const WhileInViewAnimation = ({ children }: WhileInViewAnimationProps) => {
         }}
       >
         {children}
-      </span>
+      </div>
     </section>
   );
 };
