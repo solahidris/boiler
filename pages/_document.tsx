@@ -19,7 +19,7 @@ export default function Document() {
         <meta property="og:type" content="website" />
         {/* <meta property="og:title" content="HireSolah" /> */}
         {/* <meta property="og:description" content="HireSolah - Websites built by experts just for you. Save cost by communicating directly with the developers to solve your needs. Multiple flexible monthly payment options. Get your stunning website up and running in no time!" /> */}
-        {/* <meta property="og:image" content="https://hiresolah.com/fb_og_image_1200_630.png" /> */}
+        {/* <meta property="og:image" content="https://hiresolah.com/seo_fb_og_image_1200_630.png" /> */}
 
         {/* <!-- Twitter Meta Tags --> */}
         {/* <meta name="twitter:card" content="summary_large_image" /> */}
@@ -27,7 +27,7 @@ export default function Document() {
         {/* <meta name="twitter:creator" content="@solaheth_" /> */}
         {/* <meta name="twitter:title" content="HireSolah for building websites" /> */}
         {/* <meta name="twitter:description" content="HireSolah - Websites built by experts just for you. Save cost by communicating directly with the developers to solve your needs. Multiple flexible monthly payment options. Get your stunning website up and running in no time!" /> */}
-        {/* <meta name="twitter:image" content="https://hiresolah.com/twitter_image_1200_630.png" /> */}
+        {/* <meta name="twitter:image" content="https://hiresolah.com/seo_twitter_image_1200_630.png" /> */}
         {/* <meta property="twitter:domain" content="hiresolah.com" /> */}
         {/* <meta property="twitter:url" content="https://www.hiresolah.com/" /> */}
 
