@@ -6,7 +6,7 @@ interface WhileInViewAnimationProps {
   children: ReactNode;
 }
 
-const WhileInViewAnimationFromLeft = ({ children }: WhileInViewAnimationProps) => {
+const WhileInViewAnimationFromRight = ({ children }: WhileInViewAnimationProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -14,9 +14,9 @@ const WhileInViewAnimationFromLeft = ({ children }: WhileInViewAnimationProps) =
     <section ref={ref}>
       <div
         style={{
-          transform: isInView ? "none" : "translateX(-30px)",
+          transform: isInView ? "none" : "translateX(30px)",
           opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s"
         }}
       >
         {children}
@@ -25,4 +25,4 @@ const WhileInViewAnimationFromLeft = ({ children }: WhileInViewAnimationProps) =
   );
 };
 
-export default WhileInViewAnimationFromLeft;
+export default WhileInViewAnimationFromRight;

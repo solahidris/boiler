@@ -1,19 +1,21 @@
-import { useMediaQuery } from '@react-hook/media-query';
+import { useMediaQuery } from 'react-responsive';
 
-export const useIsMobile = (): boolean => {
-  const isMobile = useMediaQuery('(max-width: 768px)');
+export default function useIsMobile() {
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   return isMobile;
-};
+}
 
 // Sample use case - below
 
-// import { useIsMobile } from './useIsMobile';
-// const LeComponent = () => {
-//     const isMobile = useIsMobile();
-//     return(
-//         <>
-//             {isMobile ? (<p>mobile stuff</p>) : (<p>desktop stuff</p>)}
-//         </>
-//     )
+// import useIsMobile from './useIsMobile';
+
+// export default function ComponentName() {
+  
+//   const isMobile = useIsMobile();
+
+//   return (
+//     <>
+//       {isMobile && <p>mobile only text</p>}
+//     </>
+//   )
 // }
-// export default LeComponent;

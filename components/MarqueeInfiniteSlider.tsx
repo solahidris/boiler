@@ -1,4 +1,4 @@
-import WhileInViewAnimation from "./WhileInViewAnimation";
+import WhileInViewAnimation from "./animationFadeIn/WhileInViewAnimation";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
