@@ -1,14 +1,16 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-// import Head from "next/head";
-// import { Analytics } from '@vercel/analytics/react';
+import { DarkModeProvider } from "@/hooks/DarkModeContext";
+import { LanguageProvider } from "@/hooks/LanguageContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      {/* <Head><title>AppName</title></Head> */}
-      {/* <Analytics /> */}
-      <Component {...pageProps} />
-    </>
+    <div>
+      <DarkModeProvider>
+        <LanguageProvider>
+          <Component {...pageProps} />
+        </LanguageProvider>
+      </DarkModeProvider>
+    </div>
   );
 }
