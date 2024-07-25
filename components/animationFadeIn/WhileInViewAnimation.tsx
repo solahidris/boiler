@@ -4,14 +4,15 @@ import { useInView } from "framer-motion";
 
 interface WhileInViewAnimationProps {
   children: ReactNode;
+  classNameProp?: string;
 }
 
-const WhileInViewAnimation = ({ children }: WhileInViewAnimationProps) => {
+const WhileInViewAnimation = ({ children, classNameProp }: WhileInViewAnimationProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section ref={ref}>
+    <section ref={ref} className={`${classNameProp}`}>
       <div
         style={{
           transform: isInView ? "none" : "translateY(-30px)",

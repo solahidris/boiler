@@ -1,21 +1,24 @@
 import DarkModeButton from "./DarkModeButton";
+import HamburgerMenuButton from "./HamburgerMenuButton";
+import Link from "next/link";
 
 const HeaderMenu = () => {
   return (
-    <div className="flex justify-between p-8 shadow-lg dark:bg-black dark:text-white">
+    <div className="h-24 flex items-center justify-between p-6 shadow-lg dark:bg-black dark:text-white text-lg">
+      
       <div>
-        <h1 className="uppercase font-bold">Klinik Amethyst</h1>
+        <Link href="/" prefetch><h1 className="uppercase font-bold text-xl">Klinik Amethyst</h1></Link>
       </div>
-      <div>
+
+      {/* <div>
         Menu
+      </div> */}
+
+      <div className="w-40">
+        <DarkModeButton />
+        <HamburgerMenuButton />
       </div>
-      
-      {/* <button className="btn">batan</button>
-      <button className="btn btn-primary">batan</button>
-      <button className="btn btn-secondary">batan</button>
-      <button className="btn btn-accent">batan</button> */}
-      
-      <DarkModeButton />
+
     </div>
   )
 };
