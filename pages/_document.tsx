@@ -6,19 +6,22 @@ export default function Document() {
     <Html lang="en">
       <Head>
         {/* <!-- Open Graph Meta Tags --> */}
-        {/* <title>HireSolah</title> */}
+        <title>HireSolah</title>
         <meta property="og:locale" content="en_US" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* <meta name="description" content="HireSolah - Websites built by experts just for you. Save cost by communicating directly with the developers to solve your needs. Multiple flexible monthly payment options. Get your stunning website up and running in no time!" /> */}
         {/* <meta name="keywords" content="website, development, experts, monthly payment, flexible, communication, developers" /> */}
         <meta name="author" content="Solah Idris" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://hiresolah.com" />
+        {/* https://search.google.com/search-console/welcome */}
 
         {/* <!-- Facebook Meta Tags --> */}
         {/* <meta property="og:url" content="https://www.hiresolah.com/" /> */}
         <meta property="og:type" content="website" />
-        {/* <meta property="og:title" content="HireSolah" /> */}
-        {/* <meta property="og:description" content="HireSolah - Websites built by experts just for you. Save cost by communicating directly with the developers to solve your needs. Multiple flexible monthly payment options. Get your stunning website up and running in no time!" /> */}
+        <meta property="og:title" content="HireSolah" />
+        <meta property="og:description" content="HireSolah - Websites built by experts just for you. Save cost by communicating directly with the developers to solve your needs. Multiple flexible monthly payment options. Get your stunning website up and running in no time!" />
         {/* <meta property="og:image" content="https://hiresolah.com/seo_fb_og_image_1200_630.png" /> */}
 
         {/* <!-- Twitter Meta Tags --> */}
