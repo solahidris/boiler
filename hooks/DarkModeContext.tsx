@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, ReactNode } from "react";
+import { createContext, useState, useContext, ReactNode, useEffect } from "react";
 
 interface DarkModeContextProps {
   darkMode: boolean;
@@ -9,14 +9,37 @@ const DarkModeContext = createContext<DarkModeContextProps | undefined>(undefine
 
 export const DarkModeProvider = ({ children }: { children: ReactNode }) => {
   const [darkMode, setDarkMode] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedMode = localStorage.getItem("darkMode");
+      if (savedMode) {
+        setDarkMode(JSON.parse(savedMode));
+      }
+      setIsMounted(true);
+    }
+  }, []);
 
   const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
+    setDarkMode((prevMode) => {
+      const newMode = !prevMode;
+      if (typeof window !== "undefined") {
+        localStorage.setItem("darkMode", JSON.stringify(newMode));
+      }
+      return newMode;
+    });
   };
+
+  useEffect(() => {
+    if (isMounted) {
+      document.documentElement.setAttribute("data-theme", darkMode ? "business" : "nord");
+    }
+  }, [darkMode, isMounted]);
 
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
-      <div className={darkMode ? "dark-mode" : ""}>
+      <div className={isMounted && darkMode ? "dark" : ""}>
         {children}
       </div>
     </DarkModeContext.Provider>

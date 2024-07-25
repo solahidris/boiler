@@ -1,12 +1,13 @@
 import { useDarkMode } from "@/hooks/DarkModeContext";
+import { Switch } from "./ui/switch";
 
 const DarkModeButton = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <button onClick={toggleDarkMode}>
-      {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-    </button>
+    <div>
+      <Switch onClick={toggleDarkMode} checked={darkMode}/>
+    </div>
   );
 };
 

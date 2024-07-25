@@ -1,4 +1,5 @@
 import HeaderMenu from "@/components/HeaderMenu";
+// import './styles/globals.css';
 
 const Home = () => {
   return (

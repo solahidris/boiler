@@ -3,13 +3,17 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" data-theme="nord"> 
+    {/* Default to light theme */}
+    {/* <Html lang="en" data-theme="business"> */}
+    {/* Default to dark theme */}
+      
       <Head>
         {/* <!-- Open Graph Meta Tags --> */}
         <title>HireSolah</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:locale" content="en_US" />
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* <meta name="description" content="HireSolah - Websites built by experts just for you. Save cost by communicating directly with the developers to solve your needs. Multiple flexible monthly payment options. Get your stunning website up and running in no time!" /> */}
         {/* <meta name="keywords" content="website, development, experts, monthly payment, flexible, communication, developers" /> */}
         <meta name="author" content="Solah Idris" />
