@@ -33,7 +33,7 @@ export const DarkModeProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     if (isMounted) {
-      document.documentElement.setAttribute("data-theme", darkMode ? "business" : "nord");
+      document.documentElement.setAttribute("data-theme", darkMode ? "business" : "corporate");
     }
   }, [darkMode, isMounted]);
 
