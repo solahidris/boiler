@@ -5,10 +5,10 @@ import { useInView } from "framer-motion";
 interface WhileInViewAnimationProps {
   children: ReactNode;
   classNameProp?: string;
-  delay?: string;
+  delay?: number;
 }
 
-const WhileInViewAnimationFromLeft = ({ children, classNameProp, delay = "0.2s" }: WhileInViewAnimationProps) => {
+const WhileInViewAnimationFromLeft = ({ children, classNameProp, delay = 0.2 }: WhileInViewAnimationProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -18,7 +18,7 @@ const WhileInViewAnimationFromLeft = ({ children, classNameProp, delay = "0.2s" 
         style={{
           transform: isInView ? "none" : "translateX(-30px)",
           opacity: isInView ? 1 : 0,
-          transition: `all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay}`
+          transition: `all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay}s`
         }}
       >
         {children}
