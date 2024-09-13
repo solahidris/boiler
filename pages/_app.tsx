@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { DarkModeProvider } from "@/hooks/DarkModeContext";
 import { LanguageProvider } from "@/hooks/LanguageContext";
 // import { SupabaseProvider } from "@/hooks/SupabaseContext";
+// import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -11,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <LanguageProvider>
           {/* <SupabaseProvider> */}
             <Component {...pageProps} />
+            {/* <Analytics /> */}
           {/* </SupabaseProvider> */}
         </LanguageProvider>
       </DarkModeProvider>
