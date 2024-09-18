@@ -19,12 +19,12 @@ const HamburgerMenuButton = () => {
             <div className={`w-[85vw] lg:w-[75vw] opacity-100 p-6 lg:p-20 ${navigationContainerCSS}`} onMouseLeave={()=>setShowMenu(false)}>
               <div className={`${navigationLinkCSS}`}>
                 <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Home"} linkPath={"/"} setShowMenu={setShowMenu} /></WhileInViewAnimation>
-                <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"About us"} linkPath={"/about-us"} setShowMenu={setShowMenu} /></WhileInViewAnimation>
-                <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Location"} linkPath={"/location"} setShowMenu={setShowMenu} /></WhileInViewAnimation>
-                <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Career"} linkPath={"/career"} setShowMenu={setShowMenu} /></WhileInViewAnimation>
-                <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Review"} linkPath={"/review"} setShowMenu={setShowMenu} /></WhileInViewAnimation>
-                <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Expertise"} linkPath={"/expertise"} setShowMenu={setShowMenu} /></WhileInViewAnimation>
-                <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Article"} linkPath={"/article"} setShowMenu={setShowMenu} /></WhileInViewAnimation>
+                <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"About"} linkPath={"/about"} setShowMenu={setShowMenu} /></WhileInViewAnimation>
+                <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Services"} linkPath={"/services"} setShowMenu={setShowMenu} /></WhileInViewAnimation>
+                <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Blog"} linkPath={"/blog"} setShowMenu={setShowMenu} /></WhileInViewAnimation>
+                {/* <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Review"} linkPath={"/review"} setShowMenu={setShowMenu} /></WhileInViewAnimation> */}
+                {/* <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Expertise"} linkPath={"/expertise"} setShowMenu={setShowMenu} /></WhileInViewAnimation> */}
+                {/* <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Article"} linkPath={"/article"} setShowMenu={setShowMenu} /></WhileInViewAnimation> */}
                 <WhileInViewAnimation classNameProp={"text-end"}><NavigationLink linkName={"Contact us"} linkPath={"/contact-us"} setShowMenu={setShowMenu} /></WhileInViewAnimation>
               </div>
             </div>
