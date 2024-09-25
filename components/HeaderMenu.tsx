@@ -1,26 +1,56 @@
-import DarkModeButton from "./DarkModeButton";
+import { useEffect, useState } from "react";
 import HamburgerMenuButton from "./HamburgerMenuButton";
 import Link from "next/link";
-import UserMenuButton from "./UserMenuButton";
+import useIsMobile from "@/hooks/useIsMobile";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 const HeaderMenu = () => {
+  const [isClient, setIsClient] = useState(false);
+  const isMobile = useIsMobile();
+  const router = useRouter();
+  const isHomepage = router.pathname === "/";
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // or a loading spinner
+  }
+
   return (
-    <div className="h-24 flex items-center justify-between p-6 lg:px-12 shadow-lg text-lg dark:border-b-[4px] dark:border-gray-500/20">
-      
-      <div>
-        <Link href="/" prefetch><h1 className="uppercase font-bold text-xl">Klinik Amethyst</h1></Link>
-      </div>
+    <div className={`h-24 flex items-center justify-between p-6 lg:px-24 text-lg ${isHomepage ? "tertiary-bg" : "bg-white"}`}>
+      {isMobile ? (
+        <div className="flex justify-between w-full bg-red-300">
+            <Link href="/">
+                <Image src="/header_logo_homepage.png" alt="header_logo" width={400} height={400} className="max-w-[60vw] h-auto top-6 z-10 absolute" />
+            </Link>
+            <div className="w-20">
+              <HamburgerMenuButton />
+            </div>
+        </div>
+      ) : (
+        <div className={`flex justify-between w-full z-20 ${!isHomepage ? "primary-color font-[500]" : "text-white font-thin"}`}>
+          <div className="flex items-center gap-8 text-sm tracking-widest">
+            <Link href="/about">ABOUT</Link>
+            <Link href="/service">SERVICES</Link>
+          </div>
 
-      {/* <div>Center Menu</div> */}
+          <div>
+            <Link href="/">
+                <Image src={`/header_logo_${isHomepage ? "homepage" : "primary" }.png`} alt="header_logo" width={400} height={400} className="max-w-[240px] h-auto" />
+            </Link>
+          </div>
 
-      <div className="w-40">
-        <UserMenuButton />
-        <DarkModeButton />
-        <HamburgerMenuButton />
-      </div>
-
+          <div className="flex items-center gap-8 text-sm tracking-widest">
+            <Link href="/blog">BLOG</Link>
+            <Link href="/contact">CONTACT US</Link>
+          </div>
+        </div>
+      )}
     </div>
-  )
+  );
 };
 
 export default HeaderMenu;

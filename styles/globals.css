@@ -79,3 +79,63 @@
     background-color: #15222f;
     color: #ffffff;
   } */
+
+
+/* Import Montserrat from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* Import Sackers Gothic Std */
+@font-face {
+  font-family: 'Sackers Gothic Std';
+  src: url('/fonts/SackersGothicStd-Regular.woff2') format('woff2'),
+       url('/fonts/SackersGothicStd-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the secondary font */
+.secondary-font {
+  font-family: 'Sackers Gothic Std', sans-serif;
+}
+
+.primary-color {
+  color: #355B82;
+}
+.primary-color-fill {
+  fill: #355B82;
+}
+.primary-bg {
+  background-color: #355B82;
+}
+.primary-bg-hover:hover {
+  background-color: #2d4f70;
+}
+
+.secondary-color {
+  color: #EBEFF2;
+}
+.secondary-color-fill {
+  fill: #EBEFF2;
+}
+.secondary-bg {
+  background-color: #EBEFF2;
+}
+.secondary-bg-hover:hover {
+  background-color: #d8dbde;
+}
+
+.tertiary-color {
+  color: #223140;
+}
+.tertiary-bg {
+  background-color: #223140;
+}
+
+/* Blue Button - White Text */
+.button-primary {
+  @apply uppercase text-white primary-bg primary-bg-hover px-8 py-3 text-xs tracking-widest;
+}
+/* White Button - Blue Text */
+.button-secondary {
+  @apply uppercase primary-color secondary-bg secondary-bg-hover px-8 py-3 text-xs tracking-widest;
+}
