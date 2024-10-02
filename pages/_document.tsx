@@ -8,9 +8,6 @@ export default function Document() {
     {/* Default to dark theme */}
       
       <Head>
-        {/*<title>{`HireSolah | Website Expert`}</title> */}
-        {/* <!-- Prevent zoom-in at input on mobile --> */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         {/* <!-- Open Graph Meta Tags --> */}
         <meta property="og:locale" content="en_US" />
         <meta charSet="UTF-8" />
