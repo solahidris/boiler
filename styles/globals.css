@@ -139,3 +139,7 @@
 .button-secondary {
   @apply uppercase primary-color secondary-bg secondary-bg-hover px-8 py-3 text-xs tracking-widest;
 }
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
