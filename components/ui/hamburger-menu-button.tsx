@@ -1,18 +1,25 @@
+import { useRouter } from "next/router";
+
+
 interface HamburgerMenuButtonIconProps {
   onClick: () => void;
   checked: boolean;
 }
 
 const HamburgerMenuButtonIcon = ({ onClick, checked }: HamburgerMenuButtonIconProps) => {
+
+  const router = useRouter();
+  const isHomepage = router.pathname === ("/");
+
   return (
-    <label className="btn btn-circle swap swap-rotate">
+    <label className="btn btn-circle shadow-none swap swap-rotate bg-transparent border-0">
       {/* this hidden checkbox controls the state */}
       {/* <input type="checkbox" /> */}
       <input type="checkbox" onClick={onClick} checked={checked} readOnly />
 
       {/* hamburger icon */}
       <svg
-        className="swap-off fill-current"
+        className={`swap-off fill-current ${isHomepage ? "text-white" : "text-primary-color"}`}
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -23,7 +30,7 @@ const HamburgerMenuButtonIcon = ({ onClick, checked }: HamburgerMenuButtonIconPr
 
       {/* close icon */}
       <svg
-        className="swap-on fill-current"
+        className={`swap-on fill-current ${isHomepage ? "text-white" : "text-primary-color"}`}
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"

@@ -4,12 +4,15 @@ import { FC, ReactNode } from 'react';
 
 interface PageContainerProps {
   children: ReactNode;
+  className?: string; 
 }
 
-const PageContainer: FC<PageContainerProps> = ({ children }) => {
+const PageContainer: FC<PageContainerProps> = ({ children, className }) => {
+  const containerClass = className || 'bg-secondary-color';
+  // Use passed className or default to 'bg-secondary-color'
 
   return (
-    <div className="secondary-bg">
+    <div className={containerClass}>
       <HeaderMenu />
         {children}
       <Footer />

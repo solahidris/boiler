@@ -15,13 +15,13 @@ const GoogleReviews = () => {
         <div className="h-[242px] flex flex-col gap-2 w-full justify-center items-center">
             <p>{review.text}</p>
             <div className="flex gap-4 justify-center items-center">
-                <span className="font-bold primary-color">{review.rating}</span>
+                <span className="font-bold text-primary-color">{review.rating}</span>
                 <div className="flex">
                     {Array.from({ length: roundedRating }).map((_, index) => (
-                        <StarIcon key={index} className="primary-color-fill primary-color" />
+                        <StarIcon key={index} className="text-primary-color-fill text-primary-color" />
                     ))}
                 </div>
-                <Image src="/logo_google.png" alt="logo_google" width={400} height={400} className="max-w-[88px]"/>
+                <Image src="/logos/logo_google.png" alt="logo_google" width={400} height={400} className="max-w-[88px]"/>
                 <span>{`Customer Reviews`}</span>
             </div>
         </div>
