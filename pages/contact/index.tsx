@@ -1,4 +1,4 @@
-import GoogleReviews from "@/components/GoogleReviews";
+import GoogleReviewsSimple from "@/components/GoogleReviewsSimple";
 import PageContainer from "@/components/PageContainer";
 import UserPageContent from "@/components/UserPageContent";
 
@@ -6,7 +6,7 @@ const UserPage = () => {
 
     return (
         <PageContainer>
-            <GoogleReviews />
+            <GoogleReviewsSimple />
             <UserPageContent />
         </PageContainer>
     )

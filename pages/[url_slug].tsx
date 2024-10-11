@@ -5,14 +5,20 @@ import GoogleReviews from "@/components/GoogleReviews";
 // import './styles/globals.css';
 
 const OtherPages = () => {
+  
   const content = {
     title: "Page Title",
     description: "Page Description",
     imagePath: "/banners/banner_placeholder.png",
   };
 
+  // Example review objects
+  const reviews: any[] = [  
+    { author_name: "John Doe", rating: 5, text: "Great service!" },
+  ];
+
   const components = [
-    { Component: GoogleReviews, props: {} },
+    { Component: GoogleReviews, props: { reviews } }, // Pass reviews here
   // { Component: HeroContent, props: {} },
   // { Component: Benefits, props: {} },
   // { Component: Testimonials, props: {} },
